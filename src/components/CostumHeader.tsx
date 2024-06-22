@@ -5,7 +5,6 @@ import Colors from '../constants/Colors';
 import { Link } from 'expo-router';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import BottomSheet from './BottomSheet';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const SearchBar = () => (
   <View style={{ height: 60, backgroundColor: '#fff' }}>
@@ -14,7 +13,7 @@ const SearchBar = () => (
         <Ionicons style={{ paddingLeft: 10 }} size={20} color={Colors.medium} name="search" />
         <TextInput style={{ padding: 10, color: Colors.mediumDark }} placeholder="Restaurants, groceries, dishes" />
       </View>
-      <Link href={'/(modal)/filter'} asChild>
+      <Link href={'/(modal)/filter'} asChild>  
         <TouchableOpacity style={{ padding: 10, borderRadius: 50 }}>
           <Ionicons name="options-outline" size={20} color={Colors.primary} />
         </TouchableOpacity>

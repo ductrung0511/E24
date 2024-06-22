@@ -4,7 +4,6 @@ export type Tables<T extends keyof Database['public']['Tables']> = Database['pub
 export type InsertTables<T extends keyof Database['public']['Tables']> = Database['public']['Tables'][T]['Insert']
 import { Tables as DatabaseTables } from "./database.types";
 
-
 export type Product = {
   id: number;
   image_url: string | null;
@@ -14,8 +13,6 @@ export type Product = {
   brand_name: string;
   description: string | null;
 };
-
-
 
 export type CartItem = {
   id: string;

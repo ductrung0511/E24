@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Touchable, TouchableOpacity, FlatList, ListRenderItem, Button } from 'react-native';
 import React, { useEffect, useState } from 'react';
-import Colors from '../../constants/Colors';
+import Colors from '../../../constants/Colors';
 import { useNavigation } from 'expo-router';
 import categories from '@/assets/data/filter.json';
 import { Ionicons } from '@expo/vector-icons';

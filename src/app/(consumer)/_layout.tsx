@@ -5,6 +5,7 @@ import Colors from '@/src/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Text } from '@/src/components/Themed';
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
   initialRouteName: 'index',
@@ -23,6 +24,12 @@ export default function RootLayoutNav() {
           name="index"
           options={{
             header: () => <CustomHeader />,
+          }}
+        />
+        <Stack.Screen
+          name="details"
+          options={{
+            
           }}
         />
         <Stack.Screen
@@ -59,14 +66,12 @@ export default function RootLayoutNav() {
             ),
           }}
         />
-        {/* 
         <Stack.Screen
           name="(modal)/dish"
           options={{
             presentation: 'modal',
-            headerTitle: '',
+            headerTitle: ' ',
             headerTransparent: true,
-
             headerLeft: () => (
               <TouchableOpacity
                 style={{ backgroundColor: '#fff', borderRadius: 20, padding: 6 }}
@@ -78,9 +83,11 @@ export default function RootLayoutNav() {
             ),
           }}
         />
+        
         <Stack.Screen
           name="basket"
           options={{
+            headerShown: false,
             headerTitle: 'Basket',
             headerLeft: () => (
               <TouchableOpacity
@@ -91,7 +98,7 @@ export default function RootLayoutNav() {
               </TouchableOpacity>
             ),
           }}
-        /> */}
+        />
       </Stack>
     </BottomSheetModalProvider>
     </GestureHandlerRootView>
